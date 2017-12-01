@@ -5,6 +5,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var cssnano = require("cssnano");
 var babel = require("gulp-babel");
+var plumber = require("gulp-plumber");
 var minify = require("gulp-minify");
 var browserSync = require("browser-sync").create();
 
@@ -26,6 +27,7 @@ gulp.task("dev", ["stylus", "scripts", "pug"], function() {
 gulp.task("pug", function() {
   return gulp
     .src(["src/pug/**/*.pug", "!src/pug/_partials/**/*.pug"])
+    .pipe(plumber())
     .pipe(pug())
     .pipe(gulp.dest("dist"));
 });
@@ -33,6 +35,7 @@ gulp.task("pug", function() {
 gulp.task("pug-build", function() {
   return gulp
     .src("src/pug/*.pug")
+    .pipe(plumber())
     .pipe(pug({ locals: { production: true } }))
     .pipe(gulp.dest("dist"));
 });
@@ -40,6 +43,7 @@ gulp.task("pug-build", function() {
 gulp.task("compile-scripts", function() {
   return gulp
     .src("src/js/**/*.js")
+    .pipe(plumber())
     .pipe(
       babel({
         presets: ["env"]
@@ -60,6 +64,7 @@ gulp.task("stylus", function() {
   ];
   return gulp
     .src("src/css/style.styl")
+    .pipe(plumber())
     .pipe(stylus())
     .pipe(postcss(plugins))
     .pipe(gulp.dest("dist/css"))
