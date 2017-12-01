@@ -6,6 +6,7 @@ nav
   .container
     display flex
     justify-content space-between
+    align-items center
     flex-wrap wrap
     background-color white
 
@@ -20,8 +21,9 @@ nav
       justify-content right
       
       &-toggle
-        margin 1.25rem 0
         display none
+        align-items center
+        margin 1.25rem 0
         padding 1.25rem 1.5rem
         border 1px solid $richBlack
         user-select none
@@ -32,13 +34,14 @@ nav
         &-icon
           display flex
           flex-direction column
-          justify-content space-around
-          margin-left 1rem
+          margin-left 1.5rem
 
           &-bar
             height 1px
             background-color $richBlack
             width 2rem
+            margin 0.3rem 0
+            transition all .3s
 
       li
         a
@@ -74,10 +77,16 @@ nav
         &-toggle
           display flex
 
-        &.active
-          transform translateY(0)
-          border-bottom 2px solid $lightGrey
+    &.active
 
+      .nav-menu
+        transform translateY(0)
+        border-bottom 2px solid $lightGrey
 
-  
-
+      .nav-menu-toggle-icon-bar
+        &:first-child
+          transform translateY(6px) rotate(45deg)
+        &:nth-child(2)
+          opacity 0
+        &:last-child
+          transform translateY(-6px) rotate(-45deg)

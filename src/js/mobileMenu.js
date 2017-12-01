@@ -1,14 +1,14 @@
-const navMenu = $(".nav-menu");
+const nav = $("nav");
 const navMenuToggle = $(".nav-menu-toggle");
 
 navMenuToggle.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
-  if (navMenu.classList.contains("active")) {
-    navMenu.classList.remove("active");
-    navMenu.setAttribute("aria-expanded", "false");
+  if (nav.classList.contains("active")) {
+    nav.classList.remove("active");
+    nav.setAttribute("aria-expanded", "false");
   } else {
-    navMenu.classList.add("active");
-    navMenu.setAttribute("aria-expanded", "true");
+    nav.classList.add("active");
+    nav.setAttribute("aria-expanded", "true");
   }
 }

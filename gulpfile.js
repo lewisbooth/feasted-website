@@ -17,12 +17,13 @@ gulp.task("dev", ["stylus", "scripts", "pug"], function() {
     }
   });
   gulp.watch("src/css/**/*.styl", ["stylus"]);
-  gulp.watch("src/js/**/*.js", ["pug"]);
+  gulp.watch("src/js/**/*.js", ["scripts"]);
   gulp.watch("src/pug/**/*.pug", ["pug"]);
   gulp.watch("dist/**/*.html").on("change", browserSync.reload);
+  gulp.watch("dist/**/*.js", ["pug"]);
 });
 
-gulp.task("pug", ["scripts"], function() {
+gulp.task("pug", function() {
   return gulp
     .src(["src/pug/**/*.pug", "!src/pug/_partials/**/*.pug"])
     .pipe(pug())
