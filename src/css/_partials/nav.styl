@@ -1,7 +1,13 @@
+// Nav offset
+body
+  padding-top 6.5rem
+  
 nav 
   border-bottom 2px solid $lightGrey
   z-index 999
-  position relative
+  position fixed
+  top 0
+  width 100%
 
   .container
     display flex
@@ -14,6 +20,7 @@ nav
 
     &-logo
       width 12rem
+      max-width 60%
 
     &-menu
       display flex
@@ -63,12 +70,13 @@ nav
         position absolute
         flex-direction column
         width 100vw
-        margin 0 -2rem
+        margin 0 -($containerPadding)
         top 100%
         background-color white
         transform translateY(-100%)
         z-index -1
         transition transform .3s
+        will-change transform
 
         & li a
           width 100vw
