@@ -1,14 +1,14 @@
-const nav = $("nav");
-const navMenuToggle = $(".nav-menu-toggle");
+const nav = $("nav")
+const navMenuToggle = $(".nav-menu-toggle")
 
-navMenuToggle.addEventListener("click", toggleMenu);
+navMenuToggle.addEventListener("click", toggleMenu)
 
 function toggleMenu() {
   if (nav.classList.contains("active")) {
-    nav.classList.remove("active");
-    nav.setAttribute("aria-expanded", "false");
+    nav.classList.remove("active")
+    nav.setAttribute("aria-expanded", "false")
   } else {
-    nav.classList.add("active");
-    nav.setAttribute("aria-expanded", "true");
+    nav.classList.add("active")
+    nav.setAttribute("aria-expanded", "true")
   }
 }
