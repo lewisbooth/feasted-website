@@ -25,13 +25,15 @@ html
     //- Block for additional preloads that are specific to individual pages
     block pagePreloads
 
+    link(rel="stylesheet" href="https://use.typekit.net/ypx1fwq.css")
+    
     //- Inline styles in production (change in gulpfile.js), remove this if CSS is over 40kb
     if production
       style
         include ../../../dist/css/style.css
     else
       link(rel='stylesheet' href='/css/style.css' type="text/css")
-      link(rel="stylesheet" href="https://use.typekit.net/ypx1fwq.css")
+      
  
   body
     block nav
