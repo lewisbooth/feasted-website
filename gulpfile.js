@@ -29,11 +29,7 @@ gulp.task("compile-scripts", function () {
   return gulp
     .src("src/js/**/*.js")
     .pipe(plumber())
-    .pipe(
-      babel({
-        presets: ["env"]
-      })
-    )
+    .pipe(babel({ presets: ["env"] }))
     .pipe(minify())
     .pipe(gulp.dest("dist/js"))
 })
