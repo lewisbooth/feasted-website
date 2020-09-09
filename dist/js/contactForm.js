@@ -1,0 +1,1 @@
+"use strict";var contactForm=$("form[name=contactForm");function submitContactForm(t){t.preventDefault(),window.location="/contact-form"}contactForm.addEventListener("submit",submitContactForm);

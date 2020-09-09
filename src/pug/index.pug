@@ -1,12 +1,100 @@
 extends _partials/layout
 
+block pagePreloads
+  style
+    include ../../dist/css/lib/swiper.min.css
+
+block pageScripts
+  script
+    include ../../dist/js/lib/swiper.min.js
+  script
+    include ../../dist/js/swiper-init.js
+
 block content
   .container
-    img.main-logo(src='/images/logo-main.svg' alt='Feast With Friends Logo')
-    .center-content
-      h1 Coming Soon
-      h3 Chris Cohen
-      p 
-        a(href='mailto:cris@feasted.co.uk') cris@feasted.co.uk
-        br
-        a(href='tel:+447584267546') 07584267546
+    h1 This is Feasted.
+    .split-container
+      .split
+        h3 Home of #[a(href=('/dining/board')) flavourbombs] and #[a(href=('/education/feast-consultants')) education], #[a(href=('/dining/once-upon-a-plate')) dining] and #[a(href=('/dining/barbeque-catering')) adventure], our mission is to create food that tells a story through everything that we do. 
+      .split
+        p We are passionate about sourcing ingredients, sustainability, amazing combinations and bringing gastronomy to the masses. 
+        p Join our journey, learn with us and grow with us. 
+        p You’re all welcome here.
+        a.button(href='/about') About Us
+        a.button.button-primary.scroll(href='#packages') Our Packages
+  .swiper-container
+    .swiper-wrapper
+      .swiper-slide
+        picture
+          source(media='(min-width:767px)' srcset='/images/slider/1.jpg')
+          source(media='(min-width:10px)' srcset='/images/slider/1-mobile.jpg')
+          img(src='/images/slider/1.jpg')
+      .swiper-slide
+        picture
+          source(media='(min-width:767px)' srcset='/images/slider/2.jpg')
+          source(media='(min-width:10px)' srcset='/images/slider/2-mobile.jpg')
+          img(src='/images/slider/2.jpg')
+      .swiper-slide
+        picture
+          source(media='(min-width:767px)' srcset='/images/slider/3.jpg')
+          source(media='(min-width:10px)' srcset='/images/slider/3-mobile.jpg')
+          img(src='/images/slider/3.jpg')
+      .swiper-slide
+        picture
+          source(media='(min-width:767px)' srcset='/images/slider/4.jpg')
+          source(media='(min-width:10px)' srcset='/images/slider/4-mobile.jpg')
+          img(src='/images/slider/4.jpg')
+      .swiper-slide
+        picture
+          source(media='(min-width:767px)' srcset='/images/slider/5.jpg')
+          source(media='(min-width:10px)' srcset='/images/slider/5-mobile.jpg')
+          img(src='/images/slider/5.jpg')
+      .swiper-slide
+        picture
+          source(media='(min-width:767px)' srcset='/images/slider/6.jpg')
+          source(media='(min-width:10px)' srcset='/images/slider/6-mobile.jpg')
+          img(src='/images/slider/6.jpg')
+    .swiper-pagination
+    .swiper-button-prev
+    .swiper-button-next
+
+  .container#packages
+    h2 FeastEd
+    .split-container
+      .split
+        p With a background in education as well as creating amazing food, a core part of what we do is teaching others to do the same. We work with employers, schools and further education providers both locally, here in Stoke, and across the country.
+        p FeastEd is all about great flavour and using skills like maths and science in both everyday and extraordinary cooking. 
+        a.button.button-primary.scroll(href='/contact') Enquire Now
+      .split
+        h4 
+          a(href='/education/feast-consultants') Feast Consultants
+        p.small We are consultants for education providers, offering up our knowledge and skills to shape your curriculum. 
+        p.small A journey through gastronomy, exploring local cuisine and the history of our food, as well as focusing in on the future. 
+        h4 
+          a(href='/education/stoke-on-trent-college') Stoke-on-Trent College
+        p.small We’ve partnered with Stoke-on-Trent College to bring an all-new Level 3 qualification in Gastronomy to the college. 
+        p.small Consultancy projects include FE college or high school  course creation, teacher training and restaurant menus. 
+
+    h2#feasted Feasted
+    .split-container
+      .split
+        p Private dining, corporate booking and takeaways like you have never experienced before. 
+        p We are rooted in the belief that food never has to be boring and that flavour is for everyone. That’s why we have developed a mighty combination of offerings so that we can offer you amazing food whether it’s a date night, a 40th anniversary or something to schmooze your staff with.
+        p Explore our Feasted packages and get in touch with ideas and inspiration for your next event. 
+        a.button.button-primary.scroll(href='/contact') Enquire Now
+      .split
+        h4 
+          a(href='/dining/board') BOARD
+        p.small We’ve created seasonal takeaway boards that boast bold favours and gorgeous combinations. Bookable for occasions or ‘just because’ this isn’t your average takeaway and we work with local farmers and creatives to use ingredients that are rich and readily available, supporting other businesses as well as bringing you amazing food. 
+        h4 
+          a(href='/dining/once-upon-a-plate') Once Upon A Plate
+        p.small Gather your friends, gather your family and sit back for an evening of indulgence and magic. 
+        p.small Once upon a Plate is a private dining experience like no other. We work with you to learn about your event or occasion and note the stories and tales that you tell us around your attendees. We will weave this into the story of the food, creating a totally bespoke menu for you and your guests. 
+        h4 
+          a(href='/dining/barbeque-catering') Barbeque
+        p.small Our BBQ package means that rain or shine, you can sit back and relax with a personal chef keeping an eye on the barbie. 
+        p.small From seitan to steak and everything in between, hunks of halloumi and a whole host of mouth-watering sides, this is a far cry from a pack of sausages and a bag of bread rolls. 
+        h4 
+          a(href='/dining/corporate-team-building') Corporate
+        p.small Available for up to thirty people, we cater for your team in a different kind of way.
+        p.small Busting boredom and cooking up the tastiest of creations, we can set up kitchen in your workspace or we have a range of kitchens that we can book for the activity.

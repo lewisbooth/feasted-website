@@ -57,7 +57,10 @@ gulp.task("build", gulp.series("stylus", "scripts", "pug-build"))
 gulp.task("dev", gulp.series("stylus", "scripts", "pug", function () {
   browserSync.init({
     server: {
-      baseDir: "./dist"
+      baseDir: "./dist",
+      serveStaticOptions: {
+        extensions: ["html"]
+      }
     }
   })
   gulp.watch("src/css/**/*.styl", gulp.series("stylus"))

@@ -1,23 +1,25 @@
 .button
-
-  font-size 1.4rem
-  line-height 1.5em
-  height 1.25em // Vertically center text
-  outline none
-  border 1px solid $richBlack
-  text-transform uppercase
-  letter-spacing 0.2rem
   display inline-block
-  color $richBlack
-  padding 1.25rem 1.75rem
+  font-family $ttRoundsBold
+  font-size 1.4rem
+  line-height 1.3em
+  letter-spacing 0.2rem
+  text-transform uppercase
+  border 2px solid $midGrey
+  border-radius 5px
+  color $darkGrey
+  padding 1rem 3rem
   box-sizing content-box
+  text-decoration none
   margin 0 2.5rem 2.5rem 0
 
   &:hover
-    text-decoration none
-    background-color $richBlack
-    color white
+    border-color $darkGrey
+    color $darkGrey
     cursor pointer
+
+  &:visited
+    color $darkGrey
 
   &-primary
     background-color $primaryColor
@@ -26,4 +28,12 @@
 
     &:hover
       background-color $primaryColorAccent
+      border-color $primaryColorAccent
       color white
+
+    &:visited
+      color white
+
+  &-small
+    font-size 1.1rem
+    padding .75rem 2rem

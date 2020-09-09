@@ -1,0 +1,48 @@
+mixin footer
+  block footerContact
+    .footer-contact
+      .container
+        .split-container
+          .split
+            h5 Contact Us
+            p.small Seen something that has tickled your tastebuds? We would love to hear from you. No idea is too big or too small so use the form below to send us a message. 
+            +contactForm
+          .split
+            +socialMedia
+            +mailingList
+  .footer-links
+    .container 
+      .footer-links-column
+        ul.small
+          li
+            a(href='/about') About Us
+          li
+            a(href='/contact') Contact Us
+          //- li
+          //-   a(href='/blog') Blog
+          li        
+            a(href='https://shop.feasted.co.uk' target='_blank') Shop
+      .footer-links-column
+        h6 FeastEd
+        ul.small
+          li
+            a(href='/education/feast-consultants') Feast Consultants
+          li
+            a(href='/education/stoke-on-trent-college') Stoke-on-Trent College
+        
+      .footer-links-column
+        h6 Feasted
+        ul.small
+          li
+            a(href='/dining/board') BOARD
+          li
+            a(href='/dining/once-upon-a-plate') Once Upon A Plate
+          li
+            a(href='/dining/barbeque-catering') Barbeque
+          li
+            a(href='/dining/corporate-team-building') Corporate
+  .footer-amp
+    .container
+      p.small &copy; Feasted 2020
+      a(href='https://amp.studio' target='_blank')
+        p.small Designed and built by #[img(src='/images/amp-logo-white.svg')]

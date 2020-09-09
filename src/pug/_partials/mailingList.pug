@@ -1,0 +1,14 @@
+mixin mailingList
+  h5 Mailing List
+  p.small Plate lifters of the world unite! Join our mailing list to receive free recipes, stories from us and plenty other of exciting things. 
+  form.contact-form(name='mailingList')
+    .contact-form-split
+      label(for='name') Name
+      input(type='text' id='name' name='name' required)
+    .contact-form-split
+      label(for='email') Email
+      input(type='email' id='email' name='email' required)    
+    .bot
+      label(for='telephone') Telephone
+      input(type='tel' id='telephone' name='telephone')
+    button.button.button-primary.button-small(type='submit') Sign Up

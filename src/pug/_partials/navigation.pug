@@ -1,16 +1,24 @@
 mixin navigation
   nav
     .container
-      img(src='/images/logo-main.svg' alt='Main logo').nav-logo
+      a(href='/')
+        block logo
+          img.nav-logo(src='/images/feasted-logo.svg' alt='Feasted logo')
       .nav-menu-toggle Menu
         .nav-menu-toggle-icon
           .nav-menu-toggle-icon-bar
           .nav-menu-toggle-icon-bar
           .nav-menu-toggle-icon-bar
-      ul.nav-menu(aria-expanded="false")
+      ul.nav-menu(aria-expanded='false')
         li 
-          a(href="/") Home
+          a.scroll(href='/#packages') FeastEd
         li 
-          a(href="/about") About
+          a.scroll(href='/#feasted') Feasted
         li 
-          a(href="/contact") Contact
+          a(href='/about') About Us
+        li 
+          a(href='/contact') Contact Us
+        //- li 
+        //-   a(href='/blog') Blog
+        li 
+          a(href='https://shop.feasted.co.uk' target='_blank') Shop

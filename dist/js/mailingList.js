@@ -1,0 +1,1 @@
+"use strict";var mailingListForm=$("form[name=mailingList");function submitMailingList(i){i.preventDefault(),window.location="/contact-form"}mailingListForm.addEventListener("submit",submitMailingList);

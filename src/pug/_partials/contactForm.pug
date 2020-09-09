@@ -1,0 +1,15 @@
+mixin contactForm
+  form.contact-form(name='contactForm')
+    .contact-form-split
+      label(for='name') Name
+      input(type='text' id='name' name='name' required)
+    .contact-form-split
+      label(for='email') Email
+      input(type='email' id='email' name='email' required)
+    label(for='message') Message
+    textarea(id='textarea' name='textarea' rows='4' required)
+    .bot
+      label(for='telephone') Telephone
+      input(type='tel' id='telephone' name='telephone')
+    button.button.button-primary.button-small(type='submit') Send Message
+    

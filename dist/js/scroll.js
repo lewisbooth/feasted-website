@@ -1,0 +1,1 @@
+"use strict";var scrollElements=$$(".scroll");scrollElements.forEach(function(l){l.addEventListener("click",function(e){$(l.hash)&&(e.preventDefault(),$(l.hash).scrollIntoView({behavior:"smooth"}))})});

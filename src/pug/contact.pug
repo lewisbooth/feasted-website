@@ -1,0 +1,26 @@
+extends _partials/layout
+
+block title
+  title Contact Us | Feasted - Private Catering, Food Consulting and Education
+  meta(name="description" content="Private dining, corporate booking and takeaways like you have never experienced before. We would love to hear from you. No idea is too big or too small so use the form to send us a message. ")
+
+block content
+  .container.contact
+    h1 Contact Us
+    .split-container
+      .split
+        h3 Seen something that has tickled your tastebuds? 
+        h3 We would love to hear from you. No idea is too big or too small so use the form to send us a message. 
+        h6 Email Us
+        h3 cris@feasted.co.uk
+        h6 Call Us
+        h3 07804 699947
+      .split
+        +contactForm
+    .split-container
+      .split
+        +socialMedia
+      .split
+        +mailingList
+
+block footerContact

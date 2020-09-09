@@ -1,51 +1,121 @@
-// @font-face
-//   font-family "Open Sans Regular"
-//   font-weight 400
-//   src url(/fonts/OpenSans-Regular.woff2) format("woff2"),
-//       url(/fonts/OpenSans-Regular.woff) format("woff")
+@font-face
+  font-family "TTRounds Light"
+  src url(/fonts/ttrounds-light-webfont.woff2) format("woff2"),
+      url(/fonts/ttrounds-light-webfont.woff) format("woff")
+@font-face
+  font-family "TTRounds Bold"
+  src url(/fonts/ttrounds-bold-webfont.woff2) format("woff2"),
+      url(/fonts/ttrounds-bold-webfont.woff) format("woff")
+@font-face
+  font-family "Montserrat Regular"
+  src url(/fonts/montserrat-regular-webfont.woff2) format("woff2"),
+      url(/fonts/montserrat-regular-webfont.woff) format("woff")
+@font-face
+  font-family "Montserrat Bold"
+  src url(/fonts/montserrat-bold-webfont.woff2) format("woff2"),
+      url(/fonts/montserrat-bold-webfont.woff) format("woff")
 
 *
-  font-family farm-new, Helvetica, Arial, sans-serif
+  font-family $ttRoundsLight
+  font-size 1.6rem
 
-h1, h2, h3, h4, h5, h6
-  font-weight 300
-
-
-h1
-  font-size 5.6rem
+h1, h2
+  font-size 4rem
   line-height 1em
-  text-transform uppercase
+  font-family $montserratBold
+  margin-bottom 4rem
+  position relative
+
+  &::after
+    content ''
+    width 100px
+    height 1px
+    background $linkColor
+    position absolute
+    bottom -20px
+    left 0
 
 h2
-  font-size 4.2rem
+  font-size 2.8rem
+  position relative
+
+  &::after
+    top 45px
+    left 0
 
 h3
-  font-size 3.6rem
+  font-size 2.4rem
+  line-height 1.8em
+  letter-spacing .5px
+  max-width 43rem
+  margin 0 0 3rem 0
+  -webkit-text-stroke: 0.2px rgba(0, 0, 0, .5)
 
 h4
-  font-size 2.8rem
+  font-size 1.8rem
+  font-family $montserratBold
+  font-weight 500
+  margin 3rem 0 1rem 0
+
+  &:nth-child(1)
+    margin 0 0 1rem 0
 
 h5
-  font-size 2.4rem
+  font-size 2.2rem
+  font-family $montserratBold
+  font-weight 500
+  margin 0 0 1rem 0
 
 h6
-  font-size 1.6rem
+  font-size 1.4rem
+  color white
+  margin 0 0 1rem 0
+  font-family $montserratBold
+  font-weight 100
 
 a
   color $linkColor
+  text-decoration underline
+  font-size inherit
+  font-family inherit
 
   &:hover
-    text-decoration underline
     color $linkColorAccent
 
-p
-  margin 0 0 1.6em 0
+  &:visited
+    color $linkColor
 
+p
+  margin 0 0 1.2em 0
+  max-width 43rem
+  font-size 1.6rem
+  line-height 1.4
+  -webkit-text-stroke: 0.2px rgba(0, 0, 0, .5)
+
+.small
+  font-size 1.4rem
 
 ul
   margin 0
   line-height 1.6em
 
+li
+  font-size inherit
+
 .no-break
   white-space nowrap
   font-family inherit
+
+label
+  font-family $ttRoundsBold 
+  font-size 1.4rem
+  margin-bottom .5rem
+
+input, textarea
+  box-sizing border-box
+  width 100%
+  min-width 100%
+  padding .5rem .75rem
+  margin 0 0 2rem 0
+  border-radius 5px
+  border 1px solid $midGrey
