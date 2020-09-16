@@ -60,6 +60,10 @@ gulp.task("dev", gulp.series("stylus", "scripts", "pug", function () {
       baseDir: "./dist",
       serveStaticOptions: {
         extensions: ["html"]
+      },
+      middleware: function (req, res, next) {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        next();
       }
     }
   })

@@ -95,6 +95,40 @@ body
         font-family $ttRoundsBold
         margin-bottom 2rem
 
+.instafeed
+    margin 6rem 0 3rem 0
+
+    h2
+        margin-bottom 6rem
+
+    #instafeed
+        display flex
+        flex-wrap wrap
+        align-items center
+        justify-content space-between
+
+    a
+        position relative
+        background $midGrey
+        width calc(25% - 1rem)
+        padding-top 25%
+        margin-bottom 1.33rem
+        overflow hidden        
+
+        img
+            object-fit cover
+            position absolute
+            top 0
+            left 0
+            min-width 100%
+            min-height 100%
+            transition all .35s
+            opacity 1
+
+            &:hover
+                transform scale(1.1)
+                opacity .8
+
 .footer-contact
     background $lightGrey
     padding 6rem 0 3rem 0
@@ -129,7 +163,6 @@ body
     width 100%
     height 0
     overflow hidden
-
 
 .footer-links
     background #434343
@@ -227,6 +260,23 @@ body
 
         &-split
             width 100%
+
+    .instafeed
+        margin 4rem 0 0 0
+
+        .container
+            padding 0
+
+        h2
+            margin-left 1.5rem
+
+        a
+            width calc(33.3% - .1rem)
+            padding-top 33.3%
+            margin-bottom .15rem
+
+            img:hover  
+                opacity 1
 
     .footer-links
 
