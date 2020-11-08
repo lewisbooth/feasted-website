@@ -1,32 +1,27 @@
 @font-face
-  font-family "TTRounds Light"
+  font-family "Open Sans Light"
   font-display swap
   src url(/fonts/opensans-light-webfont.woff2) format("woff2"),
       url(/fonts/opensans-light-webfont.woff) format("woff")
 @font-face
-  font-family "TTRounds Regular"
+  font-family "New Farm Medium"
   font-display swap
-  src url(/fonts/ttrounds-regular-webfont.woff2) format("woff2"),
-      url(/fonts/ttrounds-regular-webfont.woff) format("woff")
+  src url(/fonts/new_farm_medium-webfont.woff2) format("woff2"),
+      url(/fonts/new_farm_medium-webfont.woff) format("woff")
 @font-face
-  font-family "TTRounds Bold"
+  font-family "Open Sans Bold"
   font-display swap
-  src url(/fonts/ttrounds-bold-webfont.woff2) format("woff2"),
-      url(/fonts/ttrounds-bold-webfont.woff) format("woff")
-@font-face
-  font-family "Montserrat Bold"
-  font-display swap
-  src url(/fonts/montserrat-bold-webfont.woff2) format("woff2"),
-      url(/fonts/montserrat-bold-webfont.woff) format("woff")
+  src url(/fonts/opensans-bold-webfont.woff2) format("woff2"),
+      url(/fonts/opensans-bold-webfont.woff) format("woff")
 
 *
-  font-family $ttRoundsLight
+  font-family $openSansLight
   font-size 1.6rem
 
 h1, h2
   font-size 4rem
   line-height 1em
-  font-family $montserratBold
+  font-family $openSansBold
   margin-bottom 4rem
   position relative
 
@@ -48,17 +43,22 @@ h2
     left 0
 
 h3
-  font-family $ttRoundsLight
+  font-family $openSansLight
   font-size 2.4rem
   line-height 2em
   letter-spacing .5px
   max-width 43rem
   margin 0 0 3rem 0
-  -webkit-text-stroke: 0.1px rgba(0, 0, 0, 1)
+  -webkit-text-stroke: 0.1px $darkGrey
+
+  a
+    -webkit-text-stroke: 0.1px $linkColor
+
 
 h4
-  font-size 1.8rem
-  font-family $montserratBold
+  font-size 2.2rem
+  font-family $farmNewMedium
+  text-transform uppercase
   font-weight 500
   margin 3rem 0 1rem 0
 
@@ -67,7 +67,7 @@ h4
 
 h5
   font-size 2.2rem
-  font-family $montserratBold
+  font-family $openSansBold
   font-weight 500
   margin 0 0 1rem 0
 
@@ -75,7 +75,7 @@ h6
   font-size 1.4rem
   color white
   margin 0 0 1rem 0
-  font-family $montserratBold
+  font-family $openSansBold
   font-weight 100
 
 a
