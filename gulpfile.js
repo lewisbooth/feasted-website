@@ -19,7 +19,7 @@ gulp.task("pug", function () {
 
 gulp.task("pug-build", function () {
   return gulp
-  .src(["src/pug/**/*.pug", "!src/pug/_partials/**/*.pug"])
+    .src(["src/pug/**/*.pug", "!src/pug/_partials/**/*.pug"])
     .pipe(plumber())
     .pipe(pug({ locals: { production: true } }))
     .pipe(gulp.dest("dist"))
