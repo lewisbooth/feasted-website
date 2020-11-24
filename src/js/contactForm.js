@@ -19,20 +19,18 @@ function submitContactForm(e) {
     message: messageInput.value
   })
 
-  console.log(data);
   axios({
     url: API_ENDPOINT,
     data,
     method: 'POST',
     headers: {
-      'x-api-key': API_KEY
+      "X-Api-Key": API_KEY
     }
   })
     .then(res =>
       window.location = '/contact-form/success'
     )
     .catch(err => {
-      console.log(err.response)
       window.location = '/contact-form/error'
     })
 }
